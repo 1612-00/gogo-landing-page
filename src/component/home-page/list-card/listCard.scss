@@ -1,0 +1,12 @@
+@use "../../../scss/" as *;
+
+.list-card {
+    width: 100%;
+    margin-top: 2rem;
+    cursor: grab;
+
+    @include mobile {
+        position: absolute;
+        top: 105vh;
+    }
+}

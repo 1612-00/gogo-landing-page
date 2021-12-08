@@ -1,0 +1,24 @@
+@use '../../scss/' as *;
+
+.section {
+    margin: 5rem 0;
+}
+
+.section-header {
+    @include flex(center, center);
+    flex-direction: column;
+    text-align: center;
+    padding: 0 12rem;
+
+    & > h2 {
+        color: $main-color;
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    & > span {
+        opacity: 0.6;
+        font-size: 1rem;
+    }
+}

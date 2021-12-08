@@ -4,8 +4,10 @@
     @include flex(flex-start, space-between);
     width: 100%;
     position: relative;
+    margin-bottom: 5rem;
 
     &__info {
+        position: relative;
         width: 32%;
 
         .title {
@@ -29,7 +31,7 @@
 
         .button {
             @include flex(center, center);
-            padding: 15px 60px;
+            padding: 10px 50px;
             border: 0;
             border-radius: 30px;
             background-color: #d6d1d1;
@@ -74,8 +76,8 @@
 
         @include mobile {
             width: 100%;
-            position: absolute;
-            top: 40vh;
+            position: relative;
+            top: 35vh;
             padding: 2rem;
 
             .title {
@@ -100,9 +102,13 @@
         }
 
         @include tablet {
-            position: fixed;
-            width: 110%;
+            position: absolute;
+            width: 55%;
             left: 50%;
+
+            & > .default {
+                width: 120%;
+            }
         }
 
         @include mobile {
