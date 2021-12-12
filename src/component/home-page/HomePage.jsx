@@ -4,11 +4,14 @@ import HeroHome from './hero-home/HeroHome';
 import ListCard from './list-card/ListCard';
 
 const HomePage = () => {
+    const onClick = () => {
+    };
+
     return (
         <div className='home-page container'>
             <HeroHome />
             <ListCard />
-            <a href='#' className='home-page__button'>
+            <a href='#feature' className='home-page__button' onClick={onClick}>
                 <i className='bx bx-chevron-down'></i>
             </a>
         </div>

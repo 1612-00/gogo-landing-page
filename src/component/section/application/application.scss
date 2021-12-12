@@ -1,0 +1,84 @@
+@use '../../../scss/' as *;
+
+.application {
+    background-color: $white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+    height: 60rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100px;
+        top: -50px;
+        border-radius: 60%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100px;
+        bottom: -50px;
+        border-radius: 60%;
+    }
+
+    &__content {
+        text-align: center;
+        position: relative;
+
+        .nav-link {
+            font-size: 1rem;
+            margin-top: 3rem;
+            cursor: pointer;
+
+            & > span ~ span {
+                margin-left: 3rem;
+            }
+
+            & > span {
+                padding: 0.5rem 1rem;
+                opacity: 0.9;
+
+                &.active {
+                    border-bottom: 4px solid purple;
+                    border-radius: 3px;
+                }
+            }
+
+            @include tablet {
+                font-size: 1.5rem;
+            }
+
+        }
+
+        .nav-img {
+            position: relative;
+
+            & > img {
+                position: absolute;
+                left: 0;
+                top: 0.7rem;
+                border-radius: 30px;
+                -webkit-box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.05);
+                box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+
+                &.active {
+                    z-index: 99;
+                }
+
+                @include tablet {
+                    border-radius: 20px;
+                }
+
+                @include mobile {
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../../../scss/' as *;
+
+.structure-card {
+    padding: 13px;
+    margin-bottom: 20px;
+
+    &__img {
+        & > img {
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 0px 12px 9px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 12px 9px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        opacity: 0.6;
+
+        @include mobile {
+            font-size: 1.6rem;
+            margin-top: 0.5rem;
+        }
+    }
+}

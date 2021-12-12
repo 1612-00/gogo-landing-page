@@ -1,0 +1,67 @@
+@use '../../../scss/' as *;
+
+.structure {
+    position: relative;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $white;
+
+    &__grid-layout {
+        display: grid;
+        margin-top: 3rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100px;
+        top: -50px;
+        border-radius: 60%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100px;
+        bottom: -50px;
+        border-radius: 60%;
+    }
+
+    @include tablet {
+        margin-top: 10rem;
+
+        &::before {
+            top: -20px;
+            border-radius: 20%;
+        }
+
+        &::after {
+            bottom: -20px;
+            border-radius: 20%;
+        }
+    }
+
+    @include mobile {
+        &::before {
+            width: 0;
+        }
+
+        &::after {
+            width: 0;
+        }
+    }
+}

@@ -1,35 +1,103 @@
 @use '../../../scss/' as *;
 
-.feature__item {
-    @include flex(center, space-around);
+.feature {
+    padding-top: 5rem;
 
-    &__info {
-        width: 45%;
+    &__item {
+        @include flex(center, space-around);
 
-        & > .title {
-            color: $main-color;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
+        &__info {
+            width: 45%;
+
+            & > .title {
+                color: $main-color;
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+            }
+
+            & > .description {
+                font-size: 0.8rem;
+                line-height: 1.8;
+                opacity: 0.7;
+
+                & > span ~ span {
+                    display: block;
+                    margin-top: 1rem;
+                }
+            }
         }
 
-        & > .description {
-            font-size: 0.8rem;
-            line-height: 1.8;
-            opacity: 0.7;
+        &__img {
+            width: 55%;
+        }
 
-            & > span ~ span {
-                display: block;
-                margin-top: 1rem;
+        & > * ~ * {
+            margin-left: 7rem;
+        }
+    }
+
+    @include tablet {
+        &__item {
+            &__info {
+                width: 50%;
+
+                & > .title {
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                }
+
+                & > .description {
+                    font-size: 1.2rem;
+
+                    & > span ~ span {
+                        display: block;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            &__img {
+                width: 50%;
+            }
+
+            & > * ~ * {
+                margin-left: 0rem;
             }
         }
     }
 
-    &__img {
-        width: 55%;
-    }
+    @include mobile {
+        position: relative;
+        &__item {
+            position: relative;
+            &__info {
+                width: 100%;
 
-    & > * ~ * {
-        margin-left: 7rem;
+                & > * ~ * {
+                    margin-bottom: 80%;
+                }
+
+                & > .title {
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                }
+
+                & > .description {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &__img {
+                position: absolute;
+                top: 43%;
+                width: 100%;
+                height: 100%;
+            }
+
+            & > * ~ * {
+                margin-left: 0rem;
+            }
+        }
     }
 }

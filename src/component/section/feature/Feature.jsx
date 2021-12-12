@@ -8,7 +8,7 @@ import smart_menu from '../../../asset/image/smart-menu.png';
 
 const Feature = () => {
     return (
-        <div className='feature'>
+        <div className='feature container' id='feature'>
             <div className='section-header'>
                 <h2>Features At a Glance</h2>
                 <span>

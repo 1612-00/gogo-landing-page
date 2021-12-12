@@ -1,0 +1,22 @@
+@use '../../scss/' as *;
+
+.footer {
+    background-image: url('../../asset/background-svg-bottom.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 850px;
+    text-align: center;
+    color: $white;
+    background-color: $white;
+    height: 40rem;
+    @include flex(center, center);
+    flex-direction: column;
+
+    &__logo {
+        padding-top: 25rem;
+        margin-bottom: 10rem;
+        width: 6rem;
+    }
+
+    
+}

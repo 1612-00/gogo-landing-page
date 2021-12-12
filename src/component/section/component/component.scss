@@ -1,0 +1,9 @@
+@use "../../../scss/" as *;
+
+.component {
+    margin: 10rem 0;
+
+    &__img {
+        margin-top: 3rem;
+    }
+}
